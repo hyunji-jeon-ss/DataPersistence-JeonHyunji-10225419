@@ -23,6 +23,8 @@
 1. 모든 `.vcxproj`의 각 ClCompile 설정에 `<AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>` 적용
 2. 콘솔 진입점(main)에서 `SetConsoleOutputCP(CP_UTF8)` / `SetConsoleCP(CP_UTF8)` 호출
 
+`<windows.h>`를 include하는 파일에서 `std::numeric_limits<T>::max()` 등을 함께 쓸 경우, include 전에 `#define NOMINMAX`를 반드시 추가한다 (`windows.h`의 `max`/`min` 매크로와 충돌해 컴파일 에러 발생).
+
 ## 커밋 컨벤션
 `COMMIT_CONVENTION.md`를 따른다. 커밋 메시지는 `<헤더> 변경 내용` 형식이며, 헤더는 `<FEATURE>`/`<FIX>`/`<DOCS>`/`<STYLE>`/`<REFACTOR>`/`<TEST>`/`<CHORE>` 중 하나만 사용한다.
 

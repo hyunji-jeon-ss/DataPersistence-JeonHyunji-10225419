@@ -1,6 +1,7 @@
 #include "repository/IItemRepository.h"
 #include "repository/JsonItemRepository.h"
 
+#define NOMINMAX
 #include <windows.h>
 
 #include <iostream>
