@@ -1,0 +1,33 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DataPersistenceLib", "DataPersistenceLib\DataPersistenceLib.vcxproj", "{404D636B-BDC3-4CBB-8FD6-C68AA0258C13}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DataPersistenceApp", "DataPersistenceApp\DataPersistenceApp.vcxproj", "{5FE41408-D8A7-412C-A21F-A1C75FC50585}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DataPersistenceTest", "DataPersistenceTest\DataPersistenceTest.vcxproj", "{1569DF9D-3685-436B-8717-2EC0D4C612F4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{404D636B-BDC3-4CBB-8FD6-C68AA0258C13}.Debug|x64.ActiveCfg = Debug|x64
+		{404D636B-BDC3-4CBB-8FD6-C68AA0258C13}.Debug|x64.Build.0 = Debug|x64
+		{404D636B-BDC3-4CBB-8FD6-C68AA0258C13}.Release|x64.ActiveCfg = Release|x64
+		{404D636B-BDC3-4CBB-8FD6-C68AA0258C13}.Release|x64.Build.0 = Release|x64
+		{5FE41408-D8A7-412C-A21F-A1C75FC50585}.Debug|x64.ActiveCfg = Debug|x64
+		{5FE41408-D8A7-412C-A21F-A1C75FC50585}.Debug|x64.Build.0 = Debug|x64
+		{5FE41408-D8A7-412C-A21F-A1C75FC50585}.Release|x64.ActiveCfg = Release|x64
+		{5FE41408-D8A7-412C-A21F-A1C75FC50585}.Release|x64.Build.0 = Release|x64
+		{1569DF9D-3685-436B-8717-2EC0D4C612F4}.Debug|x64.ActiveCfg = Debug|x64
+		{1569DF9D-3685-436B-8717-2EC0D4C612F4}.Debug|x64.Build.0 = Debug|x64
+		{1569DF9D-3685-436B-8717-2EC0D4C612F4}.Release|x64.ActiveCfg = Release|x64
+		{1569DF9D-3685-436B-8717-2EC0D4C612F4}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
