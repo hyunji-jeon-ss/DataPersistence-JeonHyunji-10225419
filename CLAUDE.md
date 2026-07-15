@@ -9,9 +9,17 @@
 - nlohmann/json (NuGet 패키지 `nlohmann.json`)
 - 코드 컨벤션은 상위 `Semiconductor` 폴더의 `CODE_CONVENTION.md`를 따른다.
 
+## 구조
+```
+DataPersistenceLib/    # 정적 라이브러리: model/Item.h, repository/(IItemRepository, JsonItemRepository)
+DataPersistenceApp/    # 콘솔 CRUD 데모 (main.cpp), Lib 참조
+DataPersistenceTest/   # gmock 단위/통합 테스트, Lib 참조
+```
+
 ## 설계 방향
-- Repository 패턴으로 저장소 접근을 인터페이스(`IRepository` 등)로 추상화
-- 실제 구현체는 JSON 파일 기반으로 작성 (`nlohmann::json`으로 직렬화/역직렬화)
+- Repository 패턴으로 저장소 접근을 인터페이스(`IItemRepository`)로 추상화 (save/findById/findAll/remove)
+- 실제 구현체(`JsonItemRepository`)는 JSON 파일 기반으로 작성 (`nlohmann::json`으로 직렬화/역직렬화)
+- 생성 시 기존 파일의 최대 id를 읽어 `next_id`를 이어받아, 재실행 후에도 id가 겹치지 않음
 - Create/Read/Update/Delete 각각에 대한 동작 검증
 
 ## 테스트
