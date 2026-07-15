@@ -1,15 +1,17 @@
 # CLAUDE.md — DataPersistence-JeonHyunji-10225419
 
 ## 프로젝트 개요
-데이터 영속성 처리 PoC. 파일 기반(JSON 권장) 저장소에 대한 CRUD와, 프로세스 재시작 후에도 데이터가 유지되는지를 검증한다.
+데이터 영속성 처리 PoC. **JSON 파일 기반**(nlohmann/json) 저장소에 대한 CRUD와, 프로세스 재시작 후에도 데이터가 유지되는지를 검증한다.
+이 PoC에서 정한 라이브러리(nlohmann/json)와 Repository 인터페이스 사용법은 메인 프로젝트(`SampleOrderSystem`)에서도 동일하게 이어간다 (코드 자체를 그대로 재사용하지는 않음).
 
 ## 기술 스택 / 컨벤션
 - C++20, Visual Studio(MSBuild, .vcxproj), gmock(NuGet)
+- nlohmann/json (NuGet 패키지 `nlohmann.json`)
 - 코드 컨벤션은 상위 `Semiconductor` 폴더의 `CODE_CONVENTION.md`를 따른다.
 
 ## 설계 방향
 - Repository 패턴으로 저장소 접근을 인터페이스(`IRepository` 등)로 추상화
-- 실제 구현체는 파일(JSON) 기반으로 작성
+- 실제 구현체는 JSON 파일 기반으로 작성 (`nlohmann::json`으로 직렬화/역직렬화)
 - Create/Read/Update/Delete 각각에 대한 동작 검증
 
 ## 테스트
